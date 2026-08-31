@@ -1,0 +1,39 @@
+sighting_id,timestamp,camera_id,image_id,species,latitude,longitude,zone,status,detection_method,confidence_score,review_status,location_visibility
+AS001,2026-08-25 6:15,CAM001,IMG001,Asian Elephant,26.5771,93.1712,Buffer Zone,Active,Camera Trap AI,0.96,Pending,Restricted
+AS002,2026-08-25 6:42,CAM002,IMG002,Spotted Deer,26.5814,93.1658,Core Zone,Observed,Camera Trap AI,0.91,Verified,Restricted
+AS003,2026-08-25 7:10,CAM003,IMG003,Wild Boar,26.5698,93.1821,Buffer Zone,Observed,Camera Trap AI,0.88,Verified,Restricted
+AS004,2026-08-25 8:30,CAM004,IMG004,Indian Rhinoceros,26.5902,93.1554,Core Zone,Active,Camera Trap AI,0.97,Pending,Restricted
+AS005,2026-08-25 9:05,CAM005,IMG005,Asian Elephant,26.5624,93.1905,Village Edge,Alert,Drone Thermal,0.94,Needs Review,Approximate
+AS006,2026-08-25 10:20,CAM006,IMG006,Spotted Deer,26.5867,93.1764,Core Zone,Observed,Camera Trap AI,0.89,Verified,Restricted
+AS007,2026-08-25 12:45,CAM007,IMG007,Golden Jackal,26.5742,93.1619,Buffer Zone,Observed,Camera Trap AI,0.83,Verified,Restricted
+AS008,2026-08-25 14:12,CAM008,IMG008,Wild Water Buffalo,26.6011,93.1887,Core Zone,Active,Camera Trap AI,0.92,Pending,Restricted
+AS009,2026-08-25 16:38,CAM009,IMG009,Asian Elephant,26.5538,93.2012,Village Edge,Alert,Drone Thermal,0.95,Needs Review,Approximate
+AS010,2026-08-25 17:05,CAM010,IMG010,Indian Rhinoceros,26.5944,93.1498,Core Zone,Observed,Camera Trap AI,0.96,Verified,Restricted
+AS011,2026-08-25 18:22,CAM011,IMG011,Wild Boar,26.5681,93.1733,Buffer Zone,Observed,Camera Trap AI,0.87,Verified,Restricted
+AS012,2026-08-25 19:40,CAM012,IMG012,Leopard,26.5459,93.1845,Buffer Zone,Alert,Camera Trap AI,0.86,Needs Review,Restricted
+AS013,2026-08-25 20:15,CAM013,IMG013,Spotted Deer,26.5793,93.1941,Core Zone,Observed,Camera Trap AI,0.93,Verified,Restricted
+AS014,2026-08-25 21:10,CAM014,IMG014,Asian Elephant,26.5587,93.2076,Village Edge,Alert,Drone Thermal,0.98,Pending,Approximate
+AS015,2026-08-25 22:05,CAM015,IMG015,Indian Rhinoceros,26.6032,93.1685,Core Zone,Active,Camera Trap AI,0.95,Pending,Restricted
+AS016,2026-08-25 22:40,CAM016,IMG016,Wild Boar,26.5726,93.1988,Buffer Zone,Observed,Camera Trap AI,0.84,Verified,Restricted
+AS017,2026-08-25 23:15,CAM017,IMG017,Golden Jackal,26.5883,93.1842,Core Zone,Observed,Camera Trap AI,0.81,Verified,Restricted
+AS018,2026-08-26 5:50,CAM018,IMG018,Asian Elephant,26.5512,93.214,Village Edge,Alert,Drone Thermal,0.97,Pending,Approximate
+AS019,2026-08-26 6:10,CAM019,IMG019,Asian Elephant,26.581,93.176,Buffer Zone,Active,Camera Trap AI,0.94,Pending,Restricted
+AS020,2026-08-26 6:45,CAM020,IMG020,Spotted Deer,26.586,93.165,Core Zone,Observed,Camera Trap AI,0.91,Verified,Restricted
+AS021,2026-08-26 7:20,CAM021,IMG021,Indian Rhinoceros,26.592,93.158,Core Zone,Active,Camera Trap AI,0.96,Pending,Restricted
+AS022,2026-08-26 8:05,CAM022,IMG022,Leopard,26.563,93.191,Village Edge,Alert,Ranger Report,0.89,Needs Review,Approximate
+AS023,2026-08-26 9:30,CAM023,IMG023,Wild Boar,26.571,93.181,Buffer Zone,Observed,Camera Trap AI,0.86,Verified,Restricted
+AS024,2026-08-26 10:15,CAM024,IMG024,Asian Elephant,26.555,93.201,Village Edge,Alert,Drone Thermal,0.95,Pending,Approximate
+AS025,2026-08-26 11:40,CAM025,IMG025,Wild Water Buffalo,26.601,93.188,Core Zone,Observed,Camera Trap AI,0.92,Verified,Restricted
+AS026,2026-08-26 13:00,CAM026,IMG026,Golden Jackal,26.574,93.162,Buffer Zone,Observed,Camera Trap AI,0.84,Verified,Restricted
+AS027,2026-08-26 14:25,CAM027,IMG027,Asian Elephant,26.56,93.207,Safari Route Edge,Alert,Drone Thermal,0.97,Pending,Approximate
+AS028,2026-08-26 15:10,CAM028,IMG028,Leopard,26.548,93.185,Buffer Zone,Active,Camera Trap AI,0.88,Verified,Restricted
+AS029,2026-08-26 16:05,CAM029,IMG029,Spotted Deer,26.58,93.195,Core Zone,Observed,Camera Trap AI,0.93,Verified,Restricted
+AS030,2026-08-26 17:30,CAM030,IMG030,Indian Rhinoceros,26.595,93.15,Core Zone,Active,Camera Trap AI,0.95,Verified,Restricted
+AS031,2026-08-26 18:20,CAM031,IMG031,Wild Boar,26.568,93.199,Farmland Edge,Alert,Camera Trap AI,0.9,Pending,Approximate
+AS032,2026-08-26 19:05,CAM032,IMG032,Asian Elephant,26.552,93.214,Village Edge,Alert,Drone Thermal,0.96,Needs Review,Approximate
+AS033,2026-08-26 20:10,CAM033,IMG033,Wild Water Buffalo,26.603,93.169,Core Zone,Observed,Camera Trap AI,0.87,Verified,Restricted
+AS034,2026-08-26 21:00,CAM034,IMG034,Leopard,26.557,93.204,Village Edge,Alert,Ranger Report,0.94,Pending,Approximate
+AS035,2026-08-26 22:15,CAM035,IMG035,Spotted Deer,26.575,93.174,Buffer Zone,Observed,Camera Trap AI,0.82,Verified,Restricted
+AS036,2026-08-26 23:00,CAM036,IMG036,Asian Elephant,26.565,93.193,Farmland Edge,Alert,Ranger Report,0.91,Needs Review,Approximate
+AS037,2026-08-27 5:40,CAM037,IMG037,Wild Boar,26.57,93.188,Farmland Edge,Active,Camera Trap AI,0.88,Pending,Approximate
+AS038,2026-08-27 6:25,CAM038,IMG038,Spotted Deer,26.584,93.178,Core Zone,Observed,Camera Trap AI,0.9,Verified,Restricted

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forest Guardian - Tourist</title>
+
+    <link rel="stylesheet" href="tourist.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="top-bar">
+        <div>
+            <h1>🌳 Forest Guardian</h1>
+            <p>Safari Safety Assistant</p>
+        </div>
+
+        <button class="profile-btn">👤</button>
+    </header>
+
+    <nav class="nav-bar">
+    <a href="#home">Home</a>
+    <a href="#safari">My Safari</a>
+    <a href="#alerts">Alerts</a>
+    <a href="#help">Help</a>
+</nav>
+
+
+    <main class="dashboard">
+
+        <!-- Welcome Section -->
+        <section class="welcome" id="home">
+            <h2>Welcome, Explorer! 🦌</h2>
+            <p>Stay safe. Respect wildlife. Enjoy your safari.</p>
+        </section>
+
+        <!-- Current Safety Status -->
+<section class="card safety-status-card">
+
+    <div class="status-header">
+        <div>
+            <h2>🛡️ Current Safety Status</h2>
+            <p>Based on recent wildlife and conflict information.</p>
+        </div>
+
+        <span class="status-badge">SAFE</span>
+    </div>
+
+    <div class="status-details">
+
+        <div class="status-item">
+            <span>🦌 Wildlife Activity</span>
+            <strong>Moderate</strong>
+        </div>
+
+        <div class="status-item">
+            <span>⚠️ Conflict Risk</span>
+            <strong>Low</strong>
+        </div>
+
+        <div class="status-item">
+            <span>🚧 Restricted Areas</span>
+            <strong>None Nearby</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- Wildlife Alert -->
+        <section class="alert-card" id="alerts">
+
+            <div class="alert-icon">⚠️</div>
+
+            <div class="alert-content">
+
+                <h3>Wildlife Alert</h3>
+
+                <p>
+                    Elephant activity detected near your current safari route.
+                </p>
+
+                <span class="alert-time">
+                    Detected 2 minutes ago
+                </span>
+
+                <button class="alert-btn" onclick="viewAlert()">
+                    View Alert
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Safari Map -->
+        <section class="card map-card" id="safari">
+
+            <h2>🗺️ Safari Map</h2>
+
+            <div class="map-placeholder">
+                <div class="map-legend">
+
+    <div>
+        <span class="legend-dot wildlife-dot"></span>
+        Wildlife Sighting
+    </div>
+
+    <div>
+        <span class="legend-dot danger-dot"></span>
+        Conflict / Danger Zone
+    </div>
+
+    <div>
+        <span class="legend-dot safe-dot"></span>
+        Safe Route
+    </div>
+
+</div>
+
+                <div class="map-message">
+                    <span>📍</span>
+
+                    <h3>Your Safari Location</h3>
+
+                    <p>
+                        Live wildlife and safety information will appear here.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Safari Status -->
+        <section class="card">
+
+            <h2>🗺️ Your Safari</h2>
+
+            <div class="safari-info">
+
+                <div>
+                    <span>Safari Zone</span>
+                    <strong>Zone A</strong>
+                </div>
+
+                <div>
+                    <span>Status</span>
+                    <strong class="safe">● Active</strong>
+                </div>
+
+            </div>
+
+            <button class="primary-btn" onclick="viewRoute()">
+                View Safe Route
+            </button>
+
+        </section>
+
+<!-- Nearby Wildlife -->
+<section class="card">
+
+    <h2>🦌 Nearby Wildlife</h2>
+
+    <div class="wildlife-item">
+
+        <div>
+            <strong>Elephant Herd</strong>
+            <span>Approximately 300 m away</span>
+        </div>
+
+        <span class="activity-badge">
+            Active
+        </span>
+
+    </div>
+
+    <div class="wildlife-item">
+
+        <div>
+            <strong>Spotted Deer</strong>
+            <span>Approximately 650 m away</span>
+        </div>
+
+        <span class="activity-badge">
+            Low Risk
+        </span>
+
+    </div>
+
+    <p class="data-note">
+        Wildlife information is based on recent sightings.
+    </p>
+
+</section>
+<!-- Human-Wildlife Conflict -->
+<section class="card conflict-card low-risk" id="conflict">
+
+    <div class="conflict-header">
+
+        <div>
+            <h2>⚠️ Conflict & Safety</h2>
+
+            <p id="conflictMessage">
+                No active conflict nearby.
+            </p>
+        </div>
+
+        <span class="risk-badge" id="riskBadge">
+            LOW RISK
+        </span>
+
+    </div>
+
+    <div class="conflict-item">
+
+        <strong id="conflictTitle">
+            Area currently monitored
+        </strong>
+
+        <span id="conflictDetails">
+            Wildlife activity is within normal levels.
+        </span>
+
+    </div>
+
+    <button class="primary-btn" onclick="viewSafetyInfo()">
+        View Safety Instructions
+    </button>
+
+</section>
+
+<!-- Alert History -->
+<section class="card">
+
+    <h2>🔔 Recent Alerts</h2>
+
+    <div class="alert-history">
+
+        <div class="history-item">
+            <div>
+                <strong>🦌 Wildlife Sighting</strong>
+                <span>Elephant herd detected near Zone A</span>
+            </div>
+
+            <small>2 min ago</small>
+        </div>
+
+        <div class="history-item">
+            <div>
+                <strong>🛣️ Route Advisory</strong>
+                <span>Recommended route updated for safety</span>
+            </div>
+
+            <small>10 min ago</small>
+        </div>
+
+        <div class="history-item">
+            <div>
+                <strong>✅ Safety Check</strong>
+                <span>No active conflict detected</span>
+            </div>
+
+            <small>25 min ago</small>
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- Demo Risk Controls -->
+<section class="card demo-card">
+
+    <h2>🧪 Demo Scenario</h2>
+
+    <p>
+        Use these controls to demonstrate how Forest Guardian
+        responds to different risk levels.
+    </p>
+
+    <div class="demo-buttons">
+
+        <button onclick="setRisk('low')">
+            Low Risk
+        </button>
+
+        <button onclick="setRisk('medium')">
+            Medium Risk
+        </button>
+
+        <button onclick="setRisk('high')">
+            High Risk
+        </button>
+
+    </div>
+
+</section>
+        <!-- Nearby Safety -->
+        <section class="card">
+
+            <h2>📍 Nearby Safety</h2>
+
+            <div class="safety-item">
+                <span>🦌 Wildlife Activity</span>
+                <strong>Moderate</strong>
+            </div>
+
+            <div class="safety-item">
+                <span>🚧 Restricted Zone</span>
+                <strong>200 m away</strong>
+            </div>
+
+            <div class="safety-item">
+                <span>🛣️ Recommended Route</span>
+                <strong>Safe</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Emergency Assistance -->
+        <section class="emergency-card" id="help">
+
+            <h2>🆘 Emergency Assistance</h2>
+
+            <p>
+                If you are in immediate danger, contact the forest authorities.
+            </p>
+
+            <button class="emergency-btn" onclick="emergencyAlert()">
+                CALL FOR HELP
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="../script.js"></script>
+
+</body>
+</html>
