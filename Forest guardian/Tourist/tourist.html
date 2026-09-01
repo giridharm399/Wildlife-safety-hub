@@ -18,7 +18,7 @@
             <p>Safari Safety Assistant</p>
         </div>
 
-        <button class="profile-btn">👤</button>
+        <button class="profile-btn" onclick="showProfile()">👤</button>
     </header>
 
     <nav class="nav-bar">
@@ -53,151 +53,135 @@
 
         <div class="status-item">
             <span>🦌 Wildlife Activity</span>
-            <strong>Moderate</strong>
+            <strong id="currentSafetyStatus">Loading...</strong>
         </div>
 
         <div class="status-item">
-            <span>⚠️ Conflict Risk</span>
-            <strong>Low</strong>
-        </div>
-
-        <div class="status-item">
-            <span>🚧 Restricted Areas</span>
-            <strong>None Nearby</strong>
-        </div>
-
-    </div>
-
-</section>
-
-
-        <!-- Wildlife Alert -->
-        <section class="alert-card" id="alerts">
-
-            <div class="alert-icon">⚠️</div>
-
-            <div class="alert-content">
-
-                <h3>Wildlife Alert</h3>
-
-                <p>
-                    Elephant activity detected near your current safari route.
-                </p>
-
-                <span class="alert-time">
-                    Detected 2 minutes ago
-                </span>
-
-                <button class="alert-btn" onclick="viewAlert()">
-                    View Alert
-                </button>
-
-            </div>
-
-        </section>
-
-
-        <!-- Safari Map -->
-        <section class="card map-card" id="safari">
-
-            <h2>🗺️ Safari Map</h2>
-
-            <div class="map-placeholder">
-                <div class="map-legend">
-
-    <div>
-        <span class="legend-dot wildlife-dot"></span>
-        Wildlife Sighting
-    </div>
-
-    <div>
-        <span class="legend-dot danger-dot"></span>
-        Conflict / Danger Zone
-    </div>
-
-    <div>
-        <span class="legend-dot safe-dot"></span>
-        Safe Route
-    </div>
-
+    <span>⚠️ Conflict Risk</span>
+    <strong id="conflictRiskStatus">Loading...</strong>
 </div>
 
-                <div class="map-message">
-                    <span>📍</span>
-
-                    <h3>Your Safari Location</h3>
-
-                    <p>
-                        Live wildlife and safety information will appear here.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- Safari Status -->
-        <section class="card">
-
-            <h2>🗺️ Your Safari</h2>
-
-            <div class="safari-info">
-
-                <div>
-                    <span>Safari Zone</span>
-                    <strong>Zone A</strong>
-                </div>
-
-                <div>
-                    <span>Status</span>
-                    <strong class="safe">● Active</strong>
-                </div>
-
-            </div>
-
-            <button class="primary-btn" onclick="viewRoute()">
-                View Safe Route
-            </button>
-
-        </section>
-
-<!-- Nearby Wildlife -->
-<section class="card">
-
-    <h2>🦌 Nearby Wildlife</h2>
-
-    <div class="wildlife-item">
-
-        <div>
-            <strong>Elephant Herd</strong>
-            <span>Approximately 300 m away</span>
-        </div>
-
-        <span class="activity-badge">
-            Active
-        </span>
+<div class="status-item">
+    <span>🚧 Restricted Areas</span>
+    <strong id="restrictedAreaStatus">Loading...</strong>
+</div>
 
     </div>
-
-    <div class="wildlife-item">
-
-        <div>
-            <strong>Spotted Deer</strong>
-            <span>Approximately 650 m away</span>
-        </div>
-
-        <span class="activity-badge">
-            Low Risk
-        </span>
-
-    </div>
-
-    <p class="data-note">
-        Wildlife information is based on recent sightings.
-    </p>
 
 </section>
+
+<!-- Safari Map -->
+<section class="card map-card" id="safari">
+
+    <h2>🗺️ Safari Map</h2>
+
+    <div class="map-placeholder">
+
+        <div class="map-legend">
+
+            <div>
+                <span class="legend-dot safe-dot"></span>
+                Recommended Route
+            </div>
+
+        </div>
+
+        <div class="map-message">
+
+            <span>📍</span>
+
+            <h3>Your Safari Route</h3>
+
+            <p>
+                Your personalized safari route will appear here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- Safari Status -->
+<section class="card">
+
+    <h2>🗺️ Your Safari</h2>
+
+    <div class="booking-selector">
+    <label for="bookingSelect">Select Booking</label>
+
+    <select id="bookingSelect">
+        <option value="">Loading bookings...</option>
+    </select>
+</div>
+
+<div class="safari-info">
+
+        <div>
+            <span>Safari Zone</span>
+            <strong id="safariZone">Loading...</strong>
+        </div>
+
+        <div>
+            <span>Status</span>
+            <strong id="safariStatus" class="safe">● Loading...</strong>
+        </div>
+
+        <div>
+            <span>Date</span>
+            <strong id="safariDate">Loading...</strong>
+        </div>
+
+        <div>
+            <span>Start Time</span>
+            <strong id="safariTime">Loading...</strong>
+        </div>
+
+        <div>
+            <span>Vehicle</span>
+            <strong id="safariVehicle">Loading...</strong>
+        </div>
+
+        <div>
+            <span>Booking ID</span>
+            <strong id="safariBooking">Loading...</strong>
+        </div>
+
+    </div>
+
+    <button
+    class="primary-btn"
+    id="safeRouteButton"
+    onclick="viewRoute()">
+    View Safe Route
+</button>
+
+</section>
+
+<!-- Safari Safety -->
+<section class="card">
+
+    <h2>🛡️ Safari Safety</h2>
+
+    <div class="safety-instructions">
+
+        <p>✓ Remain inside the safari vehicle.</p>
+
+        <p>✓ Do not approach or feed wildlife.</p>
+
+        <p>✓ Follow the designated safari route.</p>
+
+        <p>✓ Do not enter restricted areas.</p>
+
+        <p>✓ Follow instructions from forest authorities.</p>
+
+        <p>✓ Report any emergency immediately.</p>
+
+    </div>
+
+</section>
+
+
 <!-- Human-Wildlife Conflict -->
 <section class="card conflict-card low-risk" id="conflict">
 
@@ -229,6 +213,11 @@
 
     </div>
 
+    <div id="safetyAdvisory" class="safety-advisory">
+    <strong>Safety Information</strong>
+    <p>Loading safety information...</p>
+    </div>
+
     <button class="primary-btn" onclick="viewSafetyInfo()">
         View Safety Instructions
     </button>
@@ -236,92 +225,24 @@
 </section>
 
 <!-- Alert History -->
-<section class="card">
+<section class="card" id="alerts">
 
     <h2>🔔 Recent Alerts</h2>
 
-    <div class="alert-history">
+    <div class="alert-history" id="alertHistory">
 
         <div class="history-item">
             <div>
-                <strong>🦌 Wildlife Sighting</strong>
-                <span>Elephant herd detected near Zone A</span>
+                <strong>🔄 Loading Safety Updates</strong>
+                <span>Checking the latest information for your safari.</span>
             </div>
 
-            <small>2 min ago</small>
-        </div>
-
-        <div class="history-item">
-            <div>
-                <strong>🛣️ Route Advisory</strong>
-                <span>Recommended route updated for safety</span>
-            </div>
-
-            <small>10 min ago</small>
-        </div>
-
-        <div class="history-item">
-            <div>
-                <strong>✅ Safety Check</strong>
-                <span>No active conflict detected</span>
-            </div>
-
-            <small>25 min ago</small>
+            <small>Now</small>
         </div>
 
     </div>
 
 </section>
-
-  <!-- Demo Risk Controls -->
-<section class="card demo-card">
-
-    <h2>🧪 Demo Scenario</h2>
-
-    <p>
-        Use these controls to demonstrate how Forest Guardian
-        responds to different risk levels.
-    </p>
-
-    <div class="demo-buttons">
-
-        <button onclick="setRisk('low')">
-            Low Risk
-        </button>
-
-        <button onclick="setRisk('medium')">
-            Medium Risk
-        </button>
-
-        <button onclick="setRisk('high')">
-            High Risk
-        </button>
-
-    </div>
-
-</section>
-        <!-- Nearby Safety -->
-        <section class="card">
-
-            <h2>📍 Nearby Safety</h2>
-
-            <div class="safety-item">
-                <span>🦌 Wildlife Activity</span>
-                <strong>Moderate</strong>
-            </div>
-
-            <div class="safety-item">
-                <span>🚧 Restricted Zone</span>
-                <strong>200 m away</strong>
-            </div>
-
-            <div class="safety-item">
-                <span>🛣️ Recommended Route</span>
-                <strong>Safe</strong>
-            </div>
-
-        </section>
-
 
         <!-- Emergency Assistance -->
         <section class="emergency-card" id="help">
@@ -332,9 +253,12 @@
                 If you are in immediate danger, contact the forest authorities.
             </p>
 
-            <button class="emergency-btn" onclick="emergencyAlert()">
-                CALL FOR HELP
-            </button>
+            <button
+    class="primary-btn"
+    id="emergencyButton"
+    onclick="emergencyAlert()">
+    🚨 Emergency Alert
+</button>
 
         </section>
 
@@ -342,7 +266,7 @@
 
 
     <!-- JavaScript -->
-    <script src="../script.js"></script>
 
+    <script src="../script.js"></script>
 </body>
 </html>
