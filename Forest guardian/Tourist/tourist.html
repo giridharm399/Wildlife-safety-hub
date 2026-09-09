@@ -4,269 +4,320 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Forest Guardian - Tourist</title>
+    <title>Forest Guardian - Tourist Dashboard</title>
 
     <link rel="stylesheet" href="tourist.css">
+
+    <!-- Leaflet Map -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header class="top-bar">
-        <div>
+    <!-- HEADER -->
+    <header class="topbar">
+        <div class="brand">
             <h1>🌳 Forest Guardian</h1>
             <p>Safari Safety Assistant</p>
         </div>
 
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#safari">My Safari</a>
+            <a href="#alerts">Alerts</a>
+            <a href="#help">Help</a>
+        </nav>
+
         <button class="profile-btn" onclick="showProfile()">👤</button>
     </header>
 
-    <nav class="nav-bar">
-    <a href="#home">Home</a>
-    <a href="#safari">My Safari</a>
-    <a href="#alerts">Alerts</a>
-    <a href="#help">Help</a>
-</nav>
 
+    <main class="dashboard" id="home">
 
-    <main class="dashboard">
+        <!-- WELCOME SECTION -->
+<section class="welcome-section">
 
-        <!-- Welcome Section -->
-        <section class="welcome" id="home">
-            <h2>Welcome, Explorer! 🦌</h2>
-            <p>Stay safe. Respect wildlife. Enjoy your safari.</p>
-        </section>
+    <div class="welcome-content">
+        <span class="welcome-label">🌿 WELCOME TO FOREST GUARDIAN</span>
 
-        <!-- Current Safety Status -->
-<section class="card safety-status-card">
+        <h2>Your Safer Safari<br>Starts Here.</h2>
 
-    <div class="status-header">
-        <div>
-            <h2>🛡️ Current Safety Status</h2>
-            <p>Based on recent wildlife and conflict information.</p>
+        <p>
+            Explore the wilderness with confidence. Track your safari route,
+            stay aware of wildlife activity, and receive important safety
+            alerts throughout your journey.
+        </p>
+
+        <div class="welcome-features">
+            <div>
+                <span>🗺️</span>
+                <strong>Track Your Safari</strong>
+            </div>
+
+            <div>
+                <span>🐾</span>
+                <strong>Wildlife Awareness</strong>
+            </div>
+
+            <div>
+                <span>🛡️</span>
+                <strong>Stay Protected</strong>
+            </div>
         </div>
+    </div>
 
-        <span class="status-badge">SAFE</span>
+    <div class="welcome-visual">
+        <div class="forest-circle">
+            🌳
+        </div>
+        <div class="animal-icon">🐘</div>
+        <div class="leaf-icon leaf-one">🍃</div>
+        <div class="leaf-icon leaf-two">🌿</div>
+    </div>
+
+</section>
+
+        <!-- SAFETY STATUS -->
+<section class="card safety-card">
+    <div class="section-title">
+        <h2>🛡️ Current Safety Status</h2>
+    </div>
+
+    <div class="safety-status">
+        <div class="status-icon">✓</div>
+        <div>
+            <h3 id="currentSafetyStatus">SAFE</h3>
+            <p id="conflictRiskStatus">
+                No immediate wildlife conflict detected
+            </p>
+        </div>
     </div>
 
     <div class="status-details">
-
-        <div class="status-item">
-            <span>🦌 Wildlife Activity</span>
-            <strong id="currentSafetyStatus">Loading...</strong>
+        <div>
+            <span>Conflict Risk</span>
+            <strong id="conflictRiskLevel">Low</strong>
         </div>
 
-        <div class="status-item">
-    <span>⚠️ Conflict Risk</span>
-    <strong id="conflictRiskStatus">Loading...</strong>
-</div>
-
-<div class="status-item">
-    <span>🚧 Restricted Areas</span>
-    <strong id="restrictedAreaStatus">Loading...</strong>
-</div>
-
+        <div>
+            <span>Restricted Areas</span>
+            <strong id="restrictedAreaStatus">None nearby</strong>
+        </div>
     </div>
-
 </section>
 
-<!-- Safari Map -->
-<section class="card map-card" id="safari">
+        <!-- SAFARI MAP -->
+        <section class="card map-card" id="safari">
 
-    <h2>🗺️ Safari Map</h2>
-
-    <div class="map-placeholder">
-
-        <div class="map-legend">
-
-            <div>
-                <span class="legend-dot safe-dot"></span>
-                Recommended Route
+            <div class="section-title">
+                <h2>🗺️ Safari Map</h2>
             </div>
 
-        </div>
-
-        <div class="map-message">
-
-            <span>📍</span>
-
-            <h3>Your Safari Route</h3>
-
-            <p>
-                Your personalized safari route will appear here.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-        <!-- Safari Status -->
-<section class="card">
-
-    <h2>🗺️ Your Safari</h2>
-
-    <div class="booking-selector">
-    <label for="bookingSelect">Select Booking</label>
-
-    <select id="bookingSelect">
-        <option value="">Loading bookings...</option>
-    </select>
+            <div id="safariMap">
+    <iframe
+        src="https://www.google.com/maps/d/embed?mid=133xcuK2rmybGCszGhetfF8WE02BIpjU&ehbc=2E312F"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        loading="lazy">
+    </iframe>
 </div>
 
-<div class="safari-info">
+            <div class="map-legend">
 
-        <div>
-            <span>Safari Zone</span>
-            <strong id="safariZone">Loading...</strong>
+                <div>
+                    <span class="legend-dot safe-dot"></span>
+                    Recommended Safari Route
+                </div>
+
+                <div>
+                    <span class="legend-dot sighting-dot"></span>
+                    Animal Sightings
+                </div>
+
+                <div>
+                    <span class="legend-dot alert-dot"></span>
+                    Alerts
+                </div>
+
+                <div>
+                    <span class="legend-dot incident-dot"></span>
+                    Conflict Incidents
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MY SAFARI -->
+<section class="card safari-booking-card">
+
+    <div class="section-title">
+        <h2>🎫 My Safari</h2>
+        <span class="booking-badge">LIVE BOOKING</span>
+    </div>
+
+    <div class="booking-selector">
+        <label for="bookingSelect">Your Safari Booking</label>
+
+        <select id="bookingSelect">
+            <option value="">Select a booking</option>
+        </select>
+    </div>
+
+    <div class="safari-details">
+
+        <div class="safari-detail-item">
+            <span>📍 Zone</span>
+            <strong id="safariZone">-</strong>
         </div>
 
-        <div>
-            <span>Status</span>
-            <strong id="safariStatus" class="safe">● Loading...</strong>
+        <div class="safari-detail-item">
+            <span>🟢 Status</span>
+            <strong id="safariStatus">-</strong>
         </div>
 
-        <div>
-            <span>Date</span>
-            <strong id="safariDate">Loading...</strong>
+        <div class="safari-detail-item">
+            <span>📅 Date</span>
+            <strong id="safariDate">-</strong>
         </div>
 
-        <div>
-            <span>Start Time</span>
-            <strong id="safariTime">Loading...</strong>
+        <div class="safari-detail-item">
+            <span>🕐 Time</span>
+            <strong id="safariTime">-</strong>
         </div>
 
-        <div>
-            <span>Vehicle</span>
-            <strong id="safariVehicle">Loading...</strong>
+        <div class="safari-detail-item">
+            <span>🚙 Vehicle</span>
+            <strong id="safariVehicle">-</strong>
         </div>
 
-        <div>
-            <span>Booking ID</span>
-            <strong id="safariBooking">Loading...</strong>
+        <div class="safari-detail-item">
+            <span>🎟️ Booking ID</span>
+            <strong id="safariBooking">-</strong>
         </div>
 
     </div>
 
-    <button
-    class="primary-btn"
-    id="safeRouteButton"
-    onclick="viewRoute()">
-    View Safe Route
-</button>
-
-</section>
-
-<!-- Safari Safety -->
-<section class="card">
-
-    <h2>🛡️ Safari Safety</h2>
-
-    <div class="safety-instructions">
-
-        <p>✓ Remain inside the safari vehicle.</p>
-
-        <p>✓ Do not approach or feed wildlife.</p>
-
-        <p>✓ Follow the designated safari route.</p>
-
-        <p>✓ Do not enter restricted areas.</p>
-
-        <p>✓ Follow instructions from forest authorities.</p>
-
-        <p>✓ Report any emergency immediately.</p>
-
-    </div>
-
-</section>
-
-
-<!-- Human-Wildlife Conflict -->
-<section class="card conflict-card low-risk" id="conflict">
-
-    <div class="conflict-header">
-
-        <div>
-            <h2>⚠️ Conflict & Safety</h2>
-
-            <p id="conflictMessage">
-                No active conflict nearby.
-            </p>
-        </div>
-
-        <span class="risk-badge" id="riskBadge">
-            LOW RISK
-        </span>
-
-    </div>
-
-    <div class="conflict-item">
-
-        <strong id="conflictTitle">
-            Area currently monitored
-        </strong>
-
-        <span id="conflictDetails">
-            Wildlife activity is within normal levels.
-        </span>
-
-    </div>
-
-    <div id="safetyAdvisory" class="safety-advisory">
-    <strong>Safety Information</strong>
-    <p>Loading safety information...</p>
-    </div>
-
-    <button class="primary-btn" onclick="viewSafetyInfo()">
-        View Safety Instructions
+    <button class="primary-btn" onclick="viewRoute()">
+        🗺️ View Safe Route
     </button>
 
 </section>
 
-<!-- Alert History -->
-<section class="card" id="alerts">
 
-    <h2>🔔 Recent Alerts</h2>
+        <!-- SAFETY INSTRUCTIONS -->
+        <section class="card">
 
-    <div class="alert-history" id="alertHistory">
-
-        <div class="history-item">
-            <div>
-                <strong>🔄 Loading Safety Updates</strong>
-                <span>Checking the latest information for your safari.</span>
+            <div class="section-title">
+                <h2>⚠️ Safari Safety Instructions</h2>
             </div>
 
-            <small>Now</small>
-        </div>
+            <div class="safety-instructions">
 
+                <div class="instruction">
+                    <span>🚙</span>
+                    <p>Stay inside the safari vehicle unless your guide gives permission.</p>
+                </div>
+
+                <div class="instruction">
+                    <span>🐘</span>
+                    <p>Maintain a safe distance from wild animals.</p>
+                </div>
+
+                <div class="instruction">
+                    <span>🔇</span>
+                    <p>Avoid loud noises that may disturb wildlife.</p>
+                </div>
+
+                <div class="instruction">
+                    <span>📍</span>
+                    <p>Stay on the designated safari route.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONFLICT INFORMATION -->
+        <section class="card">
+
+            <div class="section-title">
+                <h2>🐾 Wildlife Conflict Status</h2>
+            </div>
+
+            <div class="conflict-card">
+
+                <div class="conflict-icon">🟢</div>
+
+                <div>
+                    <h3>No Active Conflict</h3>
+                    <p>
+                        There are currently no high-risk wildlife conflict
+                        incidents near your safari route.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ALERT HISTORY -->
+<section class="card" id="alerts">
+
+    <div class="section-title">
+        <h2>🔔 Recent Alerts</h2>
     </div>
+
+    <div id="alertHistory" class="alert-history">
+        <p>No recent alerts.</p>
+    </div>
+
+    <button class="secondary-btn" onclick="viewAlert()">
+        View All Alerts
+    </button>
 
 </section>
 
-        <!-- Emergency Assistance -->
-        <section class="emergency-card" id="help">
+        <!-- HELP -->
+        <section class="card" id="help">
 
-            <h2>🆘 Emergency Assistance</h2>
+            <div class="section-title">
+                <h2>🆘 Emergency Assistance</h2>
+            </div>
 
             <p>
-                If you are in immediate danger, contact the forest authorities.
+                If you encounter an emergency during your safari,
+                contact the forest authorities immediately.
             </p>
 
-            <button
-    class="primary-btn"
-    id="emergencyButton"
-    onclick="emergencyAlert()">
-    🚨 Emergency Alert
-</button>
+            <button class="emergency-btn" onclick="emergencyAlert()">
+                🚨 Emergency Alert
+            </button>
+
+            <button class="secondary-btn" onclick="viewSafetyInfo()">
+                📖 Safety Information
+            </button>
 
         </section>
 
     </main>
 
 
-    <!-- JavaScript -->
+    <!-- Leaflet JavaScript -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
 
+    <!-- Existing Tourist Dashboard JavaScript -->
     <script src="../script.js"></script>
+
 </body>
 </html>
+```

@@ -1,0 +1,7 @@
+record_id,source_layer,vehicle_type,position_sequence,latitude,longitude,wkt,vehicle_id,notes
+VEHICLE-MARKER-001,START,CAR,1,26.5747024,93.2251977,POINT (93.2251977 26.5747024),,No vehicle_id supplied in source CSV; marker preserved as provided
+VEHICLE-MARKER-002,START,CAR,2,26.5747923,93.225301,POINT (93.225301 26.5747923),,No vehicle_id supplied in source CSV; marker preserved as provided
+VEHICLE-MARKER-003,START,CAR,3,26.5747347,93.225128,POINT (93.225128 26.5747347),,No vehicle_id supplied in source CSV; marker preserved as provided
+VEHICLE-MARKER-004,START,CAR,4,26.5747695,93.2251561,POINT (93.2251561 26.5747695),,No vehicle_id supplied in source CSV; marker preserved as provided
+VEHICLE-MARKER-005,START,CAR,5,26.5746772,93.225183,POINT (93.225183 26.5746772),,No vehicle_id supplied in source CSV; marker preserved as provided
+VEHICLE-MARKER-006,START,CAR,6,26.5747275,93.2251682,POINT (93.2251682 26.5747275),,No vehicle_id supplied in source CSV; marker preserved as provided

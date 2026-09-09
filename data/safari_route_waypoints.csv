@@ -1,0 +1,24 @@
+record_id,route_id,route_sequence,global_route_sequence,booking_id,point_role,point_name,latitude,longitude,wkt,data_status,source
+ROUTE-WP-001,R001,1,1,,Route start gate,Bagori Safari Gate,26.5746616,93.2251508,POINT (93.2251508 26.5746616),Prototype verify,START CSV
+ROUTE-WP-002,R001,2,2,SB001,Booking destination waypoint,Bagori Route Point 1,26.57159,93.21761,POINT (93.21761 26.57159),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-003,R001,3,3,SB002,Booking destination waypoint,Bagori Route Point 2,26.57767,93.21888,POINT (93.21888 26.57767),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-004,R001,4,4,SB003,Booking destination waypoint,Bagori Route Point 3,26.57582,93.20039,POINT (93.20039 26.57582),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-005,R001,5,5,SB004,Booking destination waypoint,Bagori Route Point 4,26.56799,93.20597,POINT (93.20597 26.56799),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-006,R001,6,6,SB005,Booking destination waypoint,Bagori Route Point 5,26.57456,93.19604,POINT (93.19604 26.57456),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-007,R001,7,7,SB006,Booking destination waypoint,Bagori Route Point 6,26.5728,93.18702,POINT (93.18702 26.5728),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-008,R001,8,8,SB007,Booking destination waypoint,Bagori Route Point 7,26.56464,93.20261,POINT (93.20261 26.56464),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-009,R001,9,9,SB008,Booking destination waypoint,Bagori Route Point 8,26.55282,93.20803,POINT (93.20803 26.55282),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-010,R001,10,10,SB009,Booking destination waypoint,Bagori Route Point 9,26.56698,93.17656,POINT (93.17656 26.56698),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-011,R002,1,11,SB009,Booking destination waypoint,Bagori Route Point 9,26.56698,93.17656,POINT (93.17656 26.56698),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-012,R002,2,12,SB010,Booking destination waypoint,Bagori Route Point 10,26.56107,93.17342,POINT (93.17342 26.56107),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-013,R002,3,13,SB011,Booking destination waypoint,Bagori Route Point 11,26.55782,93.16354,POINT (93.16354 26.55782),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-014,R002,4,14,SB012,Booking destination waypoint,Bagori Route Point 12,26.56802,93.15177,POINT (93.15177 26.56802),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-015,R002,5,15,SB013,Booking destination waypoint,Bagori Route Point 13,26.56971,93.13975,POINT (93.13975 26.56971),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-016,R002,6,16,SB014,Booking destination waypoint,Bagori Route Point 14,26.55112,93.15839,POINT (93.15839 26.55112),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-017,R002,7,17,SB015,Booking destination waypoint,Bagori Route Point 15,26.56262,93.1483,POINT (93.1483 26.56262),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-018,R003,1,18,SB015,Booking destination waypoint,Bagori Route Point 15,26.56262,93.1483,POINT (93.1483 26.56262),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-019,R003,2,19,SB016,Booking destination waypoint,Bagori Route Point 16,26.56337,93.22176,POINT (93.22176 26.56337),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-020,R003,3,20,SB017,Booking destination waypoint,Bagori Route Point 17,26.5534,93.22502,POINT (93.22502 26.5534),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-021,R003,4,21,SB018,Booking destination waypoint,Bagori Route Point 18,26.54624,93.222,POINT (93.222 26.54624),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-022,R003,5,22,SB019,Booking destination waypoint,Bagori Route Point 19,26.53979,93.22269,POINT (93.22269 26.53979),Prototype coordinate,END CSV + route screenshot
+ROUTE-WP-023,R003,6,23,SB020,Booking destination waypoint,Bagori Route Point 20,26.5357,93.21219,POINT (93.21219 26.5357),Prototype coordinate,END CSV + route screenshot
